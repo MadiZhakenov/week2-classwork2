@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .checkboxcontainer {
+            margin: 25px;
+        }
+        .checkboxlabel{
+            font-size: 25px;
+            cursor: pointer;
+            background-color: #e2e2e2;
+            padding: 5px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkboxlabel:hover{
+            background-color: #d2d2d2;
+        }
+        .checkboxinput:checked + .checkboxlabel{
+            background-color: #fff;
+        }
+        
+
+        .container1 {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 25px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        .overlay1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 8px;
+        }
+        .container1:hover .overlay1{
+            opacity: 0.6;
+        }
+
+        .container2 {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 25px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        .overlay2{
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 8px;
+            font-size: 25px;
+            font-style: italic; 
+            text-align: center;
+        }
+        .container2:hover .overlay2{
+            opacity: 1;
+        }
+
+        .nav{
+            margin: 25px;
+        }
+        .nav a{
+            text-decoration: none;
+            font-size: 25px;
+            padding: 10px;
+            color: #000;
+            position: relative;
+        }
+        .nav a::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            background-color: rgb(0, 170, 255);
+            height: 2px;
+            transition: width 0.3s ease;
+        }
+        .nav a:hover::before{
+            width: 100%;
+        }
+
+        .parent {
+            margin: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            height: 300px;
+            width: 300px;
+            background-color: #f4f4f4;
+        }
+        .child{
+            background-color:rgb(70, 70, 70);
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-size: 25px;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="checkboxcontainer">
+        <input type="checkbox" id="checkbox1" class="checkboxinput">
+        <label for="checkbox1" class="checkboxlabel">Checkbox</label>
+    </div>
+
+
+    <div class="container1">
+        <img src="guitarplaying.JPG" alt="Guitar Playing">
+        <div class="overlay1"></div>
+    </div>
+
+    <div class="container2">
+        <img src="guitarplaying.JPG" alt="Guitar Playing">
+        <div class="overlay2">Hey!</div>
+    </div>
+
+    <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Hobbies</a>
+        <a href="#">Contact Me</a>
+    </nav>
+
+    <div class="parent">
+        <div class="child">Text</div>
+    </div>
+</body>
+</html>
